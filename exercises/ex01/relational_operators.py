@@ -1,4 +1,4 @@
-"""False and True questions"""
+"""False and True questions!"""
 
 left: str = input("left-hand side: ")
 right: str = input("right hand side: ")
