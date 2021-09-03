@@ -1,4 +1,4 @@
-"""Program that will boost my spirit"""
+"""Program that will boost my spirit!"""
 
 name: str = input("What is your name? ")
 
