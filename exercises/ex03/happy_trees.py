@@ -1,6 +1,13 @@
 """Drawing forests in a loop."""
 
-__author__ = "123456789"
+__author__ = "730449914"
 
-# The string constant for the pine tree emoji
+
+depht: int = int(input("Depht: "))
+i = 1
 TREE: str = '\U0001F332'
+
+if depht > 0:
+    while i <= depht:
+        print(i * TREE)
+        i = i + 1
