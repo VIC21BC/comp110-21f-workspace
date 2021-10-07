@@ -2,13 +2,13 @@
 
 __author__ = "730449914"
 
-integers: list[int] = [1, 2, 1]
-e_list_0: list[int] = [1, 2, 4]
-e_list_1: list[int] = [1, 6, 4]
-max_0: list[int] = [1, 3, 7, 20, 100]
+integers: list[int] = [1, 1, 1]
+e_list_0: list[int] = []
+e_list_1: list[int] = [1]
+max_0: list[int] = [1, 3, 7, 20, 10]
 
 
-def all(a: int, b: list[int]) -> bool:
+def all(b: list[int], a: int) -> bool:
     """See if one integer equals all integers in a list."""
     i: int = 0
 
@@ -28,6 +28,12 @@ def is_equal(c: list[int], d: list[int]) -> bool:
     """See if one list equals the other list!"""
     i: int = 0
 
+    if len(c) == 0 and len(d) == 0:
+        return True
+    if len(c) == 0 and len(d) > 0:
+        return False
+    if len(d) == 0 and len(c) > 0:
+        return False
     while i < len(c) and i < len(d):
         if c[i] == d[i]:
             if i == len(c) - 1 and i == len(d) - 1:
@@ -60,11 +66,11 @@ def max(input: list[int]) -> int:
                 else:
                     j += len(input)
             i += 1
-    return False
+    return input[len(input) - 1]
 
 
 if __name__ == "__main__":
-    print(all(1, integers))
+    print(all(integers, 1))
 
 
 if __name__ == "__main__":
